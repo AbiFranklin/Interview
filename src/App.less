@@ -1,0 +1,162 @@
+@import "../less/base.less";
+
+.App {
+	.Header {
+		height: 40px;
+		padding: 15px 30px;
+		background: @blue;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		color: #FFF;
+
+		svg {
+			height: 35px;
+			color: #FFF;
+		}
+
+		.Menu {
+			list-style-type: none;
+			display: flex;
+			flex-direction: row;
+			margin: 0 0 0 20px;
+			flex: 1 0 auto;
+
+			li {
+				flex: 0 0 auto;
+				padding: 0 20px;
+				font-size: 1.4rem;
+				font-weight: @bold;
+				line-height: 40px;
+				border-bottom: 3px solid transparent;
+
+				i {
+					font-size: 1.8rem;
+					margin: 0 10px 0 0;
+				}
+
+				&:global(.active) {
+					border-bottom: 3px solid @secondary;
+				}
+			}
+		}
+
+		.MenuUser {
+			display: flex;
+			flex-direction: row;
+			flex: 0 0 auto;
+			font-size: 1.4rem;
+			font-weight: @bold;
+			line-height: 67px;
+			border-bottom: 3px solid transparent;
+
+			i {
+				font-size: 1.8rem;
+				line-height: 67px;
+
+				&.Avatar {
+					margin: 0 15px 0 0;
+					font-size: 3rem;
+				}
+			}
+		}
+	}
+
+	.Content {
+		padding: 30px;
+
+		.Breadcrumb {
+			font-size: @h1;
+			font-weight: 300;
+			margin: 0 0 10px;
+
+			i {
+				margin-left: 20px;
+				height: 50px;
+				width: 50px;
+			}
+
+			.Dropdown {
+				margin-left: 20px;
+				height: 32px !important;
+				font-size: @h1;
+				border: none;
+			}
+		}
+
+		.Box {
+			background: #FFF;
+			box-shadow: @shadow;
+			padding: 20px;
+		}
+
+	}
+
+	.Team {
+		padding: 30px;
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+
+		.List {
+			background: #FFF;
+			box-shadow: @shadow;
+			height: 75vh;
+			overflow-y: scroll;
+			width: 25%;
+	
+			.Member {
+				list-style: none;
+				padding: 10px 10px 10px 50px;
+				border-bottom: 1px solid @greyLight;
+
+				h1 {
+					font-size: @h4
+				}
+	
+				p {
+					color: @greyMedium;
+				}
+			}
+	
+			.Member.selected {
+				background-color: @blue;
+			}
+		}
+
+		.Info {
+			background: #FFF;
+			box-shadow: @shadow;
+			width: 70%;
+
+			h1 {
+				font-size: @h1;
+				margin-bottom: 5px;
+			}
+
+			.StatsHeader {
+				display: flex;
+				align-items: center;
+				padding: 20px;
+				
+				img {
+					border-radius: 50%;
+					box-shadow: 0px 5px 15px 5px rgba(0, 0, 0, .1); 
+				}
+
+				.Title {
+					flex-direction: column;
+					margin-left: 20px;
+				}
+			}
+		}
+
+		.Table {
+			display: block;
+			height: 50vh;
+			overflow-y: scroll;
+		}
+	}
+	
+
+}
