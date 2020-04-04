@@ -20,6 +20,7 @@ const App = () => {
 		});
 		setTeams(teamsArray);
 		setLoading(false)
+		console.log(teamsArray)
 	};
 
 	useEffect(() => {
